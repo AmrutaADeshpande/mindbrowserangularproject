@@ -1,0 +1,59 @@
+<section>
+  <div class="container-fluid">
+    
+
+    <div class="selected-rows">
+      <div class="row">
+        
+        <h6>Employee Details</h6>
+        <div class="col-12 col-xl-12 col-lg-12 text-right">
+         
+         
+          <div class="d-inline-flex ">
+           
+            <div >  <button  class="btn white-btn mr-2" [routerLink]="['/employeeadd']" ><i
+              class="fa fa-fw fa-plus"></i></button></div>
+   
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  <div class="row text-center headingfont "  >
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pad-0">
+      <table class="table">
+      <thead>
+        <tr>
+                        <th>SR.NO.</th>
+                        <th>FIRST NAME</th>
+                        <th>LAST NAME</th>                    
+                        <th>UPDATE</th>
+                        <th> DELETE</th>
+                      
+                
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let details of listemployeeData | paginate: {id:'employeePag', itemsPerPage:pagination.numPerPage, currentPage:pagination.pageNum, totalItems:listCount};let i=index">
+         <td>{{i+1}}</td>
+          <td>{{details.firstName}}</td>       
+          <td>{{details.lastName}}</td>
+          <td (click)="goToaddemp(details.empId)"> <button type="submit" class="btn btn-outline-secondary button1">Update</button></td>
+          <td (click)="deleteemp(details.empId)" > <button type="submit" class="btn btn-outline-secondary button2">Delete</button></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-right">
+      <pagination-controls (pageChange)="getDetails($event)" id="employeePag"></pagination-controls>
+  </div>
+    </div>
+
+    </div>
+   
+
+  </div>
+    
+    </section>

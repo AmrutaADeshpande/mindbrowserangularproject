@@ -1,0 +1,11 @@
+<app-header *ngIf="router.url !== '/login'"></app-header>
+<ng-progress [positionUsing]="'marginLeft'" [showSpinner]="false" [ease]="'linear'">
+</ng-progress>
+<div style="position: relative;">
+    <div id="success-snackbar"></div>
+    <div id="error-snackbar"></div>
+</div>
+<!-- below progressbar for page routing -->
+<ng-progress *ngIf="loading" [positionUsing]="'marginLeft'" [speed]="1000" [showSpinner]="false" [ease]="'linear'">
+</ng-progress>
+<router-outlet (activate)="onActivate($event)"></router-outlet>

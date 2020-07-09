@@ -1,0 +1,162 @@
+{
+    "header": {
+      "TITLE": "Bonjour Angular avec ngx-translate !",
+      "SELECT": "मराठी",
+      "Home":"मुख्यपृष्ठ",
+      "Lead":"Lead",
+      "Contacts":"संपर्क",
+      "Accounts":"खाती",
+      "Deals":"सौदे",
+      "Calendar":"कॅलेंडर",
+      "Dashboard":"डॅशबोर्ड",
+      "Tasks":"कार्ये",
+      "Documents":"कागदपत्रे",
+      "Settings":"सेटिंग"
+    },
+    "leads":{
+      "Name":"नाव",
+      "Email":"ईमेल",
+      "Phone":"फोन",
+      "source":"स्त्रोत"
+    },
+    "products":{
+      "pname":"Product Name",
+      "pcode":"Product Code",
+      "status":"Product status ",
+      "owner":"Product Owner"
+    },
+    "addProduct":{
+      "prodowner":"Product Owner",
+      "prodcode":"Product Code",
+      "prdosaleenddate":"Sales End Date",
+      "active":"Product Active",
+      "pname":"Product Name",
+      "prdosalestartdate":"Sales Start Date",
+      "pcat":"Product Category",
+      "punit":"Unit Price",
+      "tax":"Taxable",
+      "commision":"Commission Rate"
+
+    },
+    "addLead":{
+      "First Name":"पहिले नाव",
+      "Last Name":"आडनाव",
+      "Lead Owner":"मालक",
+      "Compnay Name":"कंपनीचे नाव",
+      "Title":"शीर्षक",
+      "Email":"ईमेल",
+      "Mobile No":"मोबाईल क्रमांक",
+      "Phone No":"दूरध्वनी क्रमांक",
+      "Fax":"फॅक्स",
+      "Website":"संकेतस्थळ",
+      "LeadSource":"स्त्रोत",
+      "LeadStage":"स्टेज",
+      "Industry":"उद्योग",
+      "Noofemployee":"कर्मचार्‍यांची संख्या",
+      "AnnualRevenue":"वार्षिक महसूल",
+      "Rating":"रेटिंग",
+      "SkypeId":"स्काईप आयडी",
+      "secondaryemail":"दुय्यम ईमेल",
+      "Twitter":"ट्विटर",
+      "Address":"पत्ता",
+      "Street":"रस्ता",
+      "city":"शहर",
+      "zipcode":"पिनकोड",
+      "state":"राज्य",
+      "country":"देश",
+      "discription":"वर्णन",
+      "cancel":"Cancel",
+      "save&new":"Save & New",
+      "save":"Save"
+    },
+    "addContacts":{
+      "contactOwner":"Contact Owner",
+      "mailingstreet":"Mailing Street",
+      "mailingcity":"Mailing City",
+      "mailingstate":"Mailing State",
+      "mailingzip":"Mailing Zip",
+      "mailingcoutry":"Mailing Country",
+      "otherstreet":"Other Street",
+      "othercity":"Other City",
+      "otherstate":"Other State",
+      "otherzip":"Other Zip",
+      "othercoutry":"Other Country"
+    },
+    "addAccount":{
+      "accountOwner":"Contact Owner",
+      "accName":"Account Name",
+      "accsite":"Account Site",
+      "parentAcc":"Parent Account",
+      "accNo":"Account Number",
+      "acctype":"Account Type",
+      "annualreview":"Annual Review",
+      "ownership":"Owner Ship",
+      "scicode":"SIC Code",
+      "billingstreet":"Billing Street",
+      "billingcity":"Billing City",
+      "billingstate":"Billing State",
+      "billingzip":"Billing Zip",
+      "billingcountry":"Billing Country",
+      "shippingstreet":"Shipping Street",
+      "shippingcity":"Shipping City",
+      "shippingstate":"Shipping State",
+      "shippingzip":"Shipping Zip",
+      "shippingcountry":"Shipping Country"
+
+    },
+    "addDeal":{
+      "dealOwner":"Deal Owner",
+      "closingdate":"Closing Date",
+      "amt":"Amount",
+      "dealName":"Deal Name",
+      "stage":"Stage",
+      "contactName":"Contact Name"
+    },  
+    "messages":{
+      "200":"Success",
+      "401":"Unauthorized",
+      "403":"Forbidden",
+      "500":"Internal Server Error",
+      "601":"Required Field Empty",
+      "602":"Unique Key Exists",
+      "603":"Password Mismatch",
+      "604":"User Not Found",
+      "605":"Token Expired"
+    },
+    "contacts":{
+      "Name":"Name",
+      "accountname":"Account Name",
+      "email":"Email ",
+      "phone":"Phone"
+    },
+    "accounts":{
+      "accountname":"Account Name",
+      "email":"Email ",
+      "phone":"Phone",
+      "owner":"Owner",
+      "website":"Website "
+    },
+    "deal":{
+      "dealname":"Deal Name",
+      "amt":"Amount ",
+      "stage":"Stage",
+      "closingdate":"Closing Date",
+      "accName":"Account Name "
+    },
+    "leadDetails":{
+      "activity":"Activity",
+      "notes":"Notes",
+      "calls":"Calls",
+      "tasks":"Tasks",
+      "events":"Events",
+      "attachment":"Attachment",
+      "about":"About Lead",
+      "address":"Address Details",
+      "note":"Note",
+      "email":"Email",
+      "log":"Log",
+      "task":"Task",
+      "event":"Event"
+    }
+  }
+  

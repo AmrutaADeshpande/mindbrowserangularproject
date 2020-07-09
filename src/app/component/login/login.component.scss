@@ -1,0 +1,50 @@
+.logo{
+  width: 25%;
+  margin-bottom: 4%;
+  margin-right: 15px;
+}
+.card{
+  margin: auto;
+  width: 25rem;
+  margin-top: 90px;
+  margin-right: 70px;
+  border-radius: 0;
+}
+.form-control:hover{
+  box-shadow: 0 0 3px #c3c6ca;
+}
+.back-color{
+  background: #f3f3f3;
+}
+.card-header{
+  color: var(--btnColor);
+}
+.alertdiv{
+  width: 75%;
+  min-height: 40px;
+  padding: 5px 5px;
+  margin: auto;
+  border: 1px solid rgba(218, 27, 39, 1);
+  background-color: #ffcbcb;
+  margin-bottom: 15px;
+  span{
+      font-size: 12px;
+  }
+  
+}
+.alertimg{
+  width: 11%;
+  margin-right: 9px;
+  margin-left: 4px;
+}
+.loginbutton1
+  {
+    background: blue;
+  }
+@media(max-width:1536px){
+  .back-img{
+      width: 200%;
+      height: 137%;
+  }
+  
+}

@@ -1,0 +1,134 @@
+<section>
+  <div class="container-fluid">
+    <div class="row" id="login">
+     
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pad-0">
+        <div class="card" *ngIf="selectedTab == 'loginpage'">
+          <div class="card-header ">
+           Login
+          </div>
+
+          <div class="card-body ">
+            <div class="alertdiv" *ngIf="data.status == '603' || data.status == '604' || data.status == '500'">
+             
+            </div>
+            <form class="needs-validation" name="Loginform" #Loginform="ngForm" (ngSubmit)="Loginform.valid && login()">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="text" id="exampleInputPassword1" [(ngModel)]="logindata.email" aria-describedby="emailHelp"
+                  name="email" #email="ngModel" class="form-control" placeholder="Enter Email" required>
+                <div *ngIf="email.valid || email.touched || Loginform.submitted" class="validation">
+                  <div *ngIf="email.errors && email.errors.required">
+                Email is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" id="exampleInputPassword1" [(ngModel)]="logindata.password" name="password"
+                  #password="ngModel" class="form-control" placeholder="Password" required >
+                <div *ngIf="password.valid || password.touched || Loginform.submitted" class="validation">
+                  <div *ngIf="password.errors && password.errors.required">
+                    Password is required.
+                  </div>
+                  <div *ngIf="password.errors && password.errors.minlength" class="validation">
+                    Password must be at least 8 characters.</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </div>
+            </form>
+            <div class="notuser">
+              Not a User? <span class="register" (click)="gotoregister('custSignUp')">Register</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+       <!-- Manager register -->
+       <div  *ngIf="selectedTab == 'custSignUp'">
+        <div class="card-header">
+          Register as a new Manager
+        </div>
+        <div class="card-body">
+          <form class="needs-validation" name="signUpform" #signUpform="ngForm"
+            (ngSubmit)="signUpform.valid && doSingUp(signUpform)">
+            <div class="loginpos relative-div">
+              <img class="logcss envelope" >
+              <input type="text" placeholder="firtName" name="firtName" #firtName="ngModel"
+                [(ngModel)]="signUp.firtName" required>
+              <div *ngIf="firtName.valid || firtName.touched || signUpform.submitted">
+                <div *ngIf="firtName.errors && firtName.errors.required" class="validation">
+                  !
+                </div>
+              </div>
+            </div>
+
+            <div  >
+            
+              <input  type="text" placeholder="lastName" name="lastName" #lastName="ngModel"
+                [(ngModel)]="signUp.lastName" required>
+              <div *ngIf="lastName.valid || lastName.touched || signUpform.submitted">
+                <div *ngIf="lastName.errors && lastName.errors.required" class="validation">
+                  !
+                </div>
+              </div>
+            </div>
+            <div >
+              <img class="logcss envelope" >
+              <input class="loginimput" type="text" placeholder="company" name="company" #company="ngModel"
+                [(ngModel)]="signUp.company" required>
+              <div *ngIf="company.valid || company.touched || signUpform.submitted">
+                <div *ngIf="company.errors && company.errors.required" class="validation">
+                  
+                </div>
+              </div>
+            </div>
+            <div >
+             
+              <input class="loginimput" type="text" placeholder="address" name="address" #address="ngModel"
+                [(ngModel)]="signUp.address" required>
+              <div *ngIf="address.valid || address.touched || signUpform.submitted">
+                <div *ngIf="address.errors && address.errors.required" class="validation">
+                
+                </div>
+              </div>
+            </div>
+            <div >
+            
+              <input class="loginimput" type="text" placeholder="Email address" name="email" #email="ngModel"
+                [(ngModel)]="signUp.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+              <div *ngIf="email.valid || email.touched || signUpform.submitted">
+                <div *ngIf="email.errors && email.errors.required || email.errors && email.errors.pattern"
+                  class="validation">
+               
+                </div>
+              </div>
+            </div>
+         
+          
+            <div >
+              
+              <input class="loginimput"  placeholder="Type Your New Password" name="password"
+                #password="ngModel" [(ngModel)]="signUp.password" required>
+              <div class="tooltipdata" *ngIf="password.valid || password.touched || signUpform.submitted">
+                <div class="tooltiptext" *ngIf="password.errors && password.errors.required">
+                  Password Required.
+                </div>
+              </div>
+            </div>
+          
+          
+            <div>
+              <button type="submit" class="loginbutton1" value="Submit">SIGN UP</button>
+            </div>
+          </form>
+       
+        </div>
+      </div>
+</section>

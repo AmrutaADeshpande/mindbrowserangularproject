@@ -1,0 +1,156 @@
+
+<section>
+  <div class="container-fluid ">
+    <div>
+      <form class="needs-validation" name="employeeDetails" #employeeDetails="ngForm"
+      (ngSubmit)="employeeDetails.valid && AddOredit(employeeDetails)">
+        <div class="mylead">
+          <div class="row pad">
+            <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 heading-font">
+              <h6>Employee Details</h6>
+            </div>
+            <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 text-right">
+              <button routerLink="/" type="reset" class="btn btn-outline-secondary">Cancel</button>
+             
+              <button type="submit"  class="btn btn-outline-secondary button" name="save">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <hr class="hrhead">
+          <span class="general leadtxt">
+            Basic Information
+          </span>
+        </div>
+        <div class="row pad-top-26 paddingsize">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label input-lable-ft">First Name</label>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="customer.firstName" #firstName="ngModel" name="firstName"
+                      class="form-control  inputfield req" placeholder="Enter First Name" required>
+                    <div *ngIf="firstName.valid || firstName.touched || employeeDetails.submitted">
+                      <div *ngIf="firstName.errors && firstName.errors.required" class="required-color">
+                        First Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+    
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label input-lable-ft">Last Name</label>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="customer.lastName" #lastName="ngModel" name="lastName"
+                      class="form-control  inputfield req" placeholder="Enter Last Name" required>
+                    <div *ngIf="lastName.valid || lastName.touched || employeeDetails.submitted">
+                      <div *ngIf="lastName.errors && lastName.errors.required" class="required-color">
+                        Last Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row-->
+         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <hr class="hrhead">
+          <span class="general leadtxt">
+            Other Information
+          </span>
+        </div>
+
+        <div class="row pad-top-26 paddingsize">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label input-lable-ft">Dob</label>
+                  <div class="col-sm-6">
+                    <input type="date" [(ngModel)]="customer.dobStr" #dobStr="ngModel" name="dobStr"
+                      class="form-control  inputfield " >
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label input-lable-ft">Mobile No.</label>
+                  <div class="col-sm-6">
+                    <input type="number" [(ngModel)]="customer.mobile" #mobile="ngModel"
+                      name="mobile" class="form-control  inputfield req" placeholder="Enter Mobile Number"
+                      max="10" pattern="^[0-9]{10}$" required>
+                    <div *ngIf="mobile.valid || mobile.touched || employeeDetails.submitted">
+                      <div class="required-color" *ngIf="mobile.errors && mobile.errors.required">
+                       Mobile Number is required.
+                      </div>
+                      <div *ngIf="mobile.errors && mobile.errors.pattern" class="required-color">
+                        Enter valid 10 digit Mobile number
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+            
+        
+            </div>
+          </div>
+        </div> 
+
+        <div class="row pad-top-26 paddingsize">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label input-lable-ft">City</label>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="customer.city" #city="ngModel" name="city"
+                      class="form-control  inputfield req" placeholder="Enter City Name" required>
+                    <div *ngIf="city.valid || city.touched || employeeDetails.submitted">
+                      <div *ngIf="city.errors && city.errors.required" class="required-color">
+                        City is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+    
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label input-lable-ft">Address</label>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="customer.address" #address="ngModel" name="address"
+                      class="form-control  inputfield req" placeholder="Enter Address" required>
+                    <div *ngIf="address.valid || address.touched || employeeDetails.submitted">
+                      <div *ngIf="address.errors && address.errors.required" class="required-color">
+                        Address is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+ 
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
